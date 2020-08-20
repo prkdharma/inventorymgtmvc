@@ -12,14 +12,20 @@ public class Computer  extends Item {
 	@Id
 	@GeneratedValue
 	private int id;
-	private int discSize;
+	private int discsize;
 	
+	public int getDiscsize() {
+		return discsize;
+	}
+	public void setDiscsize(int discsize) {
+		this.discsize = discsize;
+	}
 	public Computer() {
 		
 	}
-	public Computer(String name, Supplier supplier, int discSize) {
+	public Computer(String name, Supplier supplier, int discsize) {
 		super(name, supplier);
-		this.discSize = discSize;
+		this.discsize = discsize;
 	}
 	
 	public int getId() {
@@ -28,12 +34,7 @@ public class Computer  extends Item {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getDiscSize() {
-		return discSize;
-	}
-	public void setDiscSize(int discSize) {
-		this.discSize = discSize;
-	}
+	
 	
 }
 

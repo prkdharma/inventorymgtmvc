@@ -79,7 +79,7 @@ public class InventoryUi {
 			Computer computer=(Computer)item4;
 			Item itemfetched = itemService.findById(itemid1);
 			System.out.println("fetched item id is "+itemfetched.getId()+" fetched item name is "+itemfetched.getName());
-			System.out.println("computer disk size is "+computer.getDiscSize());
+			System.out.println("computer disk size is "+computer.getDiscsize());
             
 			System.out.println("fetching phone item");
 			int itemid2 = item6.getId();
