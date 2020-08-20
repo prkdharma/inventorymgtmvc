@@ -44,6 +44,13 @@ public class ItemController {
 		return modelAndView;	
 	}
 	
+	@GetMapping("/phones")
+	public ModelAndView Allphones() {
+		List<Phone>phone =service1.phonelist();
+		System.out.println("inside phones method, phones="+phone);
+		ModelAndView modelAndView = new ModelAndView("phonelist","phones", phone);
+		return modelAndView;
+	}
 	
 
 }

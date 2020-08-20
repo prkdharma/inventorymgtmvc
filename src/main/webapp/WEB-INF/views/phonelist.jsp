@@ -20,7 +20,7 @@ id is <c:out value="${phone.id}"  />
 
 name is <c:out value="${phone.name}"  />
 <br>
-disc size is <c:out value="${phone.storagesize}"  />
+storage size is <c:out value="${phone.storageSize}"  />
 
 <br>
 </c:forEach>

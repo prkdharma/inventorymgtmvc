@@ -67,6 +67,10 @@ public class ItemServiceImpl implements IItemService {
 		return list;
 	}
 
-	
+	@Override
+	public List<Phone> phonelist() {
+		List<Phone>list = dao.phonelist();
+		return list;
+	}
 }
 

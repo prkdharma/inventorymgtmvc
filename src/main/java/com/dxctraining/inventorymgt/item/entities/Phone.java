@@ -13,6 +13,7 @@ public class Phone extends Item {
 	private int id;
 	private int storageSize;
 	
+	
 	public Phone() {
 		
 	}
@@ -37,6 +38,7 @@ public class Phone extends Item {
 	public void setStorageSize(int storageSize) {
 		this.storageSize = storageSize;
 	}
+
 	
 	
 
