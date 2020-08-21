@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.dxctraining.inventorymgt.supplier.dto.CreateSupplierRequest;
 import com.dxctraining.inventorymgt.supplier.entities.Supplier;
 import com.dxctraining.inventorymgt.supplier.service.ISupplierService;
 
@@ -21,12 +22,10 @@ public class SupplierController {
 	
 	@PostConstruct
 	public void init() {
-		Supplier supplier1 = new Supplier("dharma");
-		int id1 = supplier1.getId();
+		Supplier supplier1 = new Supplier("dharma","522614");
 		supplier1 = service.addSupplier(supplier1);
 		
-		Supplier supplier2 = new Supplier("teja");
-		int id2 = supplier2.getId();
+		Supplier supplier2 = new Supplier("teja","522303");
 		supplier2 = service.addSupplier(supplier2);
 		
 	}
@@ -45,5 +44,20 @@ public class SupplierController {
 		return modelAndView;
 		
 	}
-
+	 
+	@GetMapping("/register")
+	public ModelAndView registerSupplier() {
+		ModelAndView modelAndView = new ModelAndView("registersupplier");
+		return modelAndView;	
+	}
+	
+	@GetMapping("/processregister")
+	public ModelAndView processRegister(@RequestParam("name")String name, @RequestParam("password")String password) {
+		Supplier supplier = new Supplier(name,password);
+		supplier = service.addSupplier(supplier);
+		ModelAndView modelAndView = new ModelAndView("details","supplier",supplier);
+		return modelAndView;
+	}
+	
+	
 }

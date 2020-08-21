@@ -25,9 +25,9 @@ public class ItemController {
 	
 	@PostConstruct
 	public void init() {
-		Supplier supplier1 = new Supplier("poornima");
+		Supplier supplier1 = new Supplier("poornima","jklm");
 		service2.addSupplier(supplier1);
-		Supplier supplier2 = new Supplier("pardhasaradhi");
+		Supplier supplier2 = new Supplier("pardhasaradhi","poiu");
 		service2.addSupplier(supplier2);
 		
 		Computer computer1 = new Computer("xiaomi",supplier1,1024);

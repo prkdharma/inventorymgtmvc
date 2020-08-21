@@ -30,9 +30,9 @@ public class InventoryUi {
 	public void runUi() {
 		try {
 			List<Item> list = new ArrayList<>();
-			Supplier supplier1 = new Supplier("dharma");
-			Supplier supplier2 = new Supplier("teja");
-			Supplier supplier3 = new Supplier("dharma teja");
+			Supplier supplier1 = new Supplier("dharma","power");
+			Supplier supplier2 = new Supplier("teja","rohit");
+			Supplier supplier3 = new Supplier("dharma teja","vbnm");
 
 			supplierService.addSupplier(supplier1);
 			supplierService.addSupplier(supplier2);
