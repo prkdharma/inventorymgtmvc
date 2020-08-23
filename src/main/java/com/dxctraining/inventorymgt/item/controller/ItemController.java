@@ -70,10 +70,17 @@ public class ItemController {
 		return modelAndView;
 	}
 	
-	@GetMapping("/postaddcomputer")
-	public ModelAndView postAddComputer() {
-		CreateComputerRequest computer = new CreateComputerRequest();
-		ModelAndView modelAndView = new ModelAndView("postcomputer","computer",computer);
+	@GetMapping("/addphone")
+	public ModelAndView addPhone() {
+		ModelAndView modelAndView = new ModelAndView("addphone");
+		return modelAndView;
+	}
+	@GetMapping("/processaddphone")
+	public ModelAndView processAddPhone(@RequestParam("name")String name, @RequestParam("storageSize")int storageSize) {
+		Phone phone = new Phone(name, storageSize);
+		Item item = (Item)phone;
+		item = service1.addItem(item);
+		ModelAndView modelAndView = new ModelAndView("processphone","phone",item);
 		return modelAndView;
 	}
 	
