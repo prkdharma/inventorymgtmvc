@@ -28,7 +28,9 @@ public class Item {
 		this.name = name;
 		this.supplier = supplier;
 	}
-
+	public Item(String name) {
+		this.name = name;
+	}
 	public int getId() {
 		return id;
 	}
